@@ -1,5 +1,11 @@
 {
     "reporter": "mochawesome",
     "parallel": "true",
-    "require": "mochawesome/register"
+    "require": [
+        "ts-node/register",
+        "mochawesome/register"
+    ],
+    "extension": [
+        "ts"
+    ]
 }
