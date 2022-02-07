@@ -6,6 +6,6 @@
         "mochawesome/register"
     ],
     "extension": [
-        "ts"
+        "ts, spec.ts"
     ]
 }
