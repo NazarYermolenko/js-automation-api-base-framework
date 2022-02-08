@@ -1,4 +1,5 @@
 {
+    "timeout": 0,
     "reporter": "mochawesome",
     "parallel": "true",
     "require": [

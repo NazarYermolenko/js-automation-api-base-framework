@@ -14,4 +14,26 @@ export class ToDoEndpoint extends Endpoint {
             method: "GET"
         })
     }
+
+    async getToDoById(id: number) {
+        return this.apiClient.performApiCall<ToDo, number>({
+            url: this.endpoint + `/${id}`,
+            method: "GET"
+        })
+    }
+
+    async changeToDoById(id: number, changedToDo: ToDo) {
+        return this.apiClient.performApiCall<ToDo, ToDo>({
+            url: this.endpoint + `/${id}`,
+            method: "PUT",
+            data: changedToDo
+        })
+    }
+
+    async deleteToDoById(id: number) {
+        return this.apiClient.performApiCall<ToDo, ToDo>({
+            url: this.endpoint + `/${id}`,
+            method: "DELETE"
+        })
+    }
 }
