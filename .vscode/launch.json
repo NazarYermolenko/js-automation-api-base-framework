@@ -16,7 +16,7 @@
             "runtimeArgs": [
                 "${file}"
             ],
-            "internalConsoleOptions": "openOnSessionStart"
+            "console": "integratedTerminal"
         }
     ]
 }
