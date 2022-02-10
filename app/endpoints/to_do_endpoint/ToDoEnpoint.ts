@@ -11,14 +11,16 @@ export class ToDoEndpoint extends Endpoint {
     async getToDos(): Promise<AxiosResponse<Array<ToDo>, Array<ToDo>>> {
         return this.apiClient.performApiCall<Array<ToDo>, Array<ToDo>>({
             url: this.endpoint,
-            method: "GET"
+            method: "GET",
+            headers: this.headers
         })
     }
 
     async getToDoById(id: number) {
         return this.apiClient.performApiCall<ToDo, number>({
             url: this.endpoint + `/${id}`,
-            method: "GET"
+            method: "GET",
+            headers: this.headers
         })
     }
 
@@ -26,14 +28,16 @@ export class ToDoEndpoint extends Endpoint {
         return this.apiClient.performApiCall<ToDo, ToDo>({
             url: this.endpoint + `/${id}`,
             method: "PUT",
-            data: changedToDo
+            data: changedToDo,
+            headers: this.headers
         })
     }
 
     async deleteToDoById(id: number) {
         return this.apiClient.performApiCall<ToDo, ToDo>({
             url: this.endpoint + `/${id}`,
-            method: "DELETE"
+            method: "DELETE",
+            headers: this.headers
         })
     }
 }

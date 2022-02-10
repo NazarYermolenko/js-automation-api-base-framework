@@ -5,14 +5,12 @@ export abstract class Application {
     }
 
     private validateApplicationUrl(url: string) {
-        if (url.startsWith("http") || url.startsWith("https")) {
-            if (url.endsWith("/")) {
-                throw new Error("URL shoudn't end with '/'")
-            } else {
-                return url
-            }
-        } else {
+        if (!(url.startsWith("http") || url.startsWith("https"))) {
             throw new Error("URL should start with 'http' or 'https'")
         }
+        if (url.endsWith("/")) {
+            throw new Error("URL shoudn't end with '/'")
+        }
+        return url
     }
 }
