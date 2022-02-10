@@ -4,7 +4,7 @@ import { ToDo } from "../app/endpoints/to_do_endpoint/ToDo"
 import { JSONPlaceholderApp } from "../app/JSONPlaceholderApp"
 import { TestContextManager } from "../framework/lib/testContextManager/TestContextManager"
 
-describe("JSON Place holder", async () => {
+describe("JSON Placeholder", async function () {
     beforeEach(function () {
         new TestContextManager().setTestContext(this)
     })
