@@ -34,7 +34,7 @@ export class ToDoEndpoint extends Endpoint {
     }
 
     async deleteToDoById(id: number) {
-        return this.apiClient.performApiCall<ToDo, ToDo>({
+        return this.apiClient.performApiCall<ToDo, unknown>({
             url: this.endpoint + `/${id}`,
             method: "DELETE",
             headers: this.headers
